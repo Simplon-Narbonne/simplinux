@@ -1,0 +1,152 @@
+#DESKTOP 
+task-xfce-desktop
+task-french-kde-desktop
+task-gnome-desktop
+task-lxde-desktop
+task-french
+task-french-desktop
+
+lightdm zenity thunar-archive-plugin thunar-media-tags-plugin gdebi synaptic update-notifier
+
+#GRAPHISM
+agave gimp inkscape scribus phatch
+
+#DEV IDE
+anjuta bluefish eclipse emacs24 eric idle-python2.7 geany scite vim vim-gtk
+
+#DIFF
+meld
+
+#MUSIC
+audacity audacious gnome-mplayer streamtuner2 vlc libav-tools
+
+#VIDEO
+cheese brasero recordmydesktop
+
+#KIDS CODING
+scratch
+
+#TCHAT
+empathy pidgin irssi hexchat
+
+#MAIL
+claws-mail sylpheed icedove iceowl-extension icedove-l10n-all enigmail
+
+#TORRENT
+transmission
+
+#SIP
+ekiga linphone 
+
+#TOOLS
+shutter
+dia freeplane freemind
+tree
+#multisystem
+util-linux whois
+
+#RSS
+liferea
+
+#SCAN PRINTER
+simple-scan
+
+#PDF
+evince
+
+#BROWSER
+iceweasel chromium elinks
+
+##
+###SERVER
+##
+#APACHE
+apache2 apache2-doc apache2-mpm-prefork apache2-utils libexpat1 ssl-cert 
+
+#NGINX
+nginx
+
+#SQL
+mysql-server mysql-client
+postgresql
+
+#NoSQL
+mongodb
+
+#FTP
+filezilla
+
+siege
+
+#BACKPORT TESTING
+#gftp midori
+
+##
+###DRIVER
+##
+firmware-iwlwifi
+
+# Canon driver
+libglade2-0 libjpeg62
+xsane
+
+#smartphone and bluetooth
+wammu python-bluez
+
+bluetooth bluez gnome-bluetooth blueman bluez-tools gstreamer-tools pulseaudio-module-bluetooth
+
+
+#VERSION CONTROL
+git
+subversion rapidsvn
+mercurial
+
+#REMOTE
+x2goclient htop 
+
+#SYSTEM
+hardinfo reportbug 
+apt-mirror arandr clipit grsync locate ntp rsync sshfs xvkbd
+live-build
+
+#atom dependances
+gvfs-bin
+
+#TERMINAL
+rxvt terminator xterm screen
+
+#FIREWALL
+gufw
+
+##
+###LANGUAGES
+##
+
+#PHP
+libapache2-mod-php5 php5 php5-common php5-gd php5-mysql php5-imap php5-cli php5-cgi libapache2-mod-fcgid php-pear php-auth php5-mcrypt php5-imagick
+php-mail  mcrypt imagemagick libruby curl phpmyadmin
+
+#C / C++
+gcc gcc+ build-essential debhelper fakeroot
+autoconf cmake pkg-config
+
+#JS
+nodejs nodejs-legacy npm
+
+#Virtualisation Container
+virtualbox vagrant 
+
+#Con APT
+apt-transport-https
+
+gparted gpart sysinfo hardinfo
+
+#XFCE extra
+xfce4 xfce4-terminal xfce4-battery-plugin xfce4-weather-plugin xfce4-whiskermenu-plugin
+xfce4-cpufreq-plugin xfce4-cpugraph-plugin xfce4-datetime-plugin xfce4-volumed
+xfce4-mount-plugin xfce4-notifyd xfce4-mailwatch-plugin xfce4-xkb-plugin
+xfce4-places-plugin xfce4-power-manager-plugins xfce4-notes-plugin
+xfce4-sensors-plugin xfce4-settings xfce4-taskmanager
+thunar-archive-plugin thunar-volman tumbler tumbler-plugins-extra
+
+#plymouth

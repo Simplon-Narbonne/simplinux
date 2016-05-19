@@ -1,0 +1,8 @@
+#!/bin/bash
+systemctl disable nginx
+systemctl enable apache2
+
+
+echo "Europe/Paris" > /etc/timezone
+
+updatedb

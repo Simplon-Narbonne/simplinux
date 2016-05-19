@@ -1,0 +1,4 @@
+stats.g.doubleclick.net:HSTS	0	16853	1467003953268,1,0
+player.vimeo.com:HSTS	0	16853	1471237453376,1,1
+vimeo.com:HSTS	0	16853	1471237457061,1,1
+simplon-co.slack.com:HSTS	0	16853	1487653661398,1,1

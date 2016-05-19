@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+#Add phpmyadmin in localhost
+ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
+#Set mysql password
+service mysql start
+new_pass="linux"
+echo "set password for root@localhost=password('$new_pass');" >> /tmp/new_pass.sql
+mysql -u root --password="" < /tmp/new_pass.sql
