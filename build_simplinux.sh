@@ -7,9 +7,6 @@
 service apache2 stop
 service mysql stop
 
-mount -o remount,rw /dev/sdc6 /media/nico/datas/
-mount -o remount,rw /dev/sdb6 /media/nico/datas/
-
 DISTRIBNAME="simplinux"
 USERCUSTOM="simplon"
 USERFULLNAMECUSTOM="Simplon"
