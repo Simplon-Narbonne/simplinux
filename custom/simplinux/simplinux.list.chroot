@@ -1,18 +1,15 @@
 #DESKTOP 
 task-xfce-desktop
-task-french-kde-desktop
-task-gnome-desktop
-task-lxde-desktop
 task-french
 task-french-desktop
 
 lightdm zenity thunar-archive-plugin thunar-media-tags-plugin gdebi synaptic update-notifier
 
 #GRAPHISM
-agave gimp inkscape scribus phatch
+agave gimp inkscape scribus phatch blender krita
 
 #DEV IDE
-anjuta bluefish eclipse emacs24 eric idle-python2.7 geany scite vim vim-gtk
+anjuta bluefish eclipse emacs24 eric idle-python2.7 geany scite vim vim-gtk gedit gedit-plugins
 
 #DIFF
 meld
@@ -36,7 +33,7 @@ claws-mail sylpheed icedove iceowl-extension icedove-l10n-all enigmail
 transmission
 
 #SIP
-ekiga linphone 
+ekiga linphone sflphone-gnome
 
 #TOOLS
 shutter
@@ -106,7 +103,7 @@ x2goclient htop
 
 #SYSTEM
 hardinfo reportbug 
-apt-mirror arandr clipit grsync locate ntp rsync sshfs xvkbd
+apt-mirror arandr clipit backintime-gnome grsync locate ntp rsync sshfs xvkbd
 live-build
 
 #atom dependances
@@ -135,6 +132,7 @@ nodejs nodejs-legacy npm
 
 #Virtualisation Container
 virtualbox vagrant 
+#docker
 
 #Con APT
 apt-transport-https
@@ -149,4 +147,9 @@ xfce4-places-plugin xfce4-power-manager-plugins xfce4-notes-plugin
 xfce4-sensors-plugin xfce4-settings xfce4-taskmanager
 thunar-archive-plugin thunar-volman tumbler tumbler-plugins-extra
 
+extra-xdg-menus
+
 #plymouth
+
+#FABLAB
+arduino arduino-core gcc-avr avr-libc
