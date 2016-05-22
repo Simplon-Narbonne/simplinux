@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 #rm -rf .build/
 #/etc/init.d/apt-cacher-ng start
 #export http_proxy=http://localhost:3142/
@@ -7,12 +7,14 @@
 service apache2 stop
 service mysql stop
 
+VERSION="0.1-beta"
 DISTRIBNAME="simplinux"
+DISTRIBNAMEUPPERCASE="Simplinux"
 USERCUSTOM="simplon"
 USERFULLNAMECUSTOM="Simplon"
 HOST="simplonhost"
 
-time=`date +%Y%m%d-%H%M`
+time=$(date +%Y%m%d-%H%M)
 
 #reset config
 rm -rf config/includes.binary/*
@@ -21,22 +23,22 @@ rm -rf config/archives/*
 rm -rf config/hooks/05*
 
 #archives deb
-cp -ra custom/simplinux/archives/* config/archives/
+cp -a custom/$DISTRIBNAME/archives/* config/archives/
 
 #hook
-cp -ra custom/simplinux/hooks/* config/hooks/
+cp -a custom/$DISTRIBNAME/hooks/* config/hooks/
 
 #includes.binary
-cp -ra custom/simplinux/includes.binary/* ./config/includes.binary
-cp custom/simplinux/boot/grub.png ./config/includes.binary/isolinux/splash.png
+cp -a custom/$DISTRIBNAME/includes.binary/* ./config/includes.binary
+cp custom/$DISTRIBNAME/boot/grub.png ./config/includes.binary/isolinux/splash.png
 
 #includes.chroot
-cp -ra custom/simplinux/includes.chroot/* ./config/includes.chroot
-cp custom/simplinux/background/desktop/background.jpg  ./config/includes.chroot/usr/share/xfce4/backdrops/
+cp -a custom/$DISTRIBNAME/includes.chroot/* ./config/includes.chroot
+cp custom/$DISTRIBNAME/background/desktop/background.jpg  ./config/includes.chroot/usr/share/xfce4/backdrops/
 mv ./config/includes.chroot/usr/local/DISTRIBNAME ./config/includes.chroot/usr/local/$DISTRIBNAME
 
 #package list
-cp custom/simplinux/simplinux.list.chroot ./config/package-lists/custom.list.chroot
+cp custom/$DISTRIBNAME/$DISTRIBNAME.list.chroot ./config/package-lists/custom.list.chroot
 
 #replace DISTRIBNAME
 sed -i "s/DISTRIBNAME/$DISTRIBNAME/g" config/hooks/0500-install-atom.hook.chroot
@@ -63,23 +65,21 @@ lb config noauto \
 --apt-options "--yes --force-yes" \
 --debian-installer-distribution "jessie" \
 --debian-installer "live" \
---debian-installer-launcher "true" \
 --debian-installer-gui "true" \
 --firmware-binary "true" \
 --firmware-chroot "true" \
---iso-application "Simplinux" \
---iso-volume "Simplinux" \
---iso-preparer "Simplon Iness TEAM" \
---iso-publisher "Simplon Iness TEAM" \
+--iso-application "$DISTRIBNAMEUPPERCASE" \
+--iso-volume "$DISTRIBNAMEUPPERCASE" \
+--iso-preparer "$DISTRIBNAMEUPPERCASE TEAM" \
+--iso-publisher "$DISTRIBNAMEUPPERCASE TEAM" \
 --memtest "false" \
 --source "false"
---clean \
---debug \
 --verbose \
 "${@}"
 
-lb build 2>&1 | tee logs/log_build-simplinux-$time.log
-head -1 logs/log_build-simplinux-$time.log | awk {'print $2'}
-tail -5 logs/log_build-simplinux-$time.log | awk {'print $2'}
-mv live-image-amd64.hybrid.iso Simplinux.iso
+lb build 2>&1 | tee logs/log_build-$DISTRIBNAME-$time.log
+xmessage "Fin du script" & beep
+head -1 logs/log_build-$DISTRIBNAME-$time.log | awk {'print $2'}
+tail -5 logs/log_build-$DISTRIBNAME-$time.log | awk {'print $2'}
+mv live-image-amd64.hybrid.iso $DISTRIBNAMEUPPERCASE-"$VERSION".iso
 ls -l *.iso

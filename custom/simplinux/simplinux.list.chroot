@@ -24,7 +24,7 @@ cheese brasero recordmydesktop
 scratch
 
 #TCHAT
-empathy pidgin irssi hexchat
+empathy pidgin irssi hexchat weechat weechat-plugins
 
 #MAIL
 claws-mail sylpheed icedove iceowl-extension icedove-l10n-all enigmail
@@ -39,6 +39,7 @@ ekiga linphone sflphone-gnome
 shutter
 dia freeplane freemind
 tree
+
 #multisystem
 util-linux whois
 
@@ -103,14 +104,15 @@ x2goclient htop
 
 #SYSTEM
 hardinfo reportbug 
-apt-mirror arandr clipit backintime-gnome grsync locate ntp rsync sshfs xvkbd
+apt-mirror arandr clipit backintime-gnome grsync locate ntp rsync sshfs nfs-common xvkbd
 live-build
+debian-installer-launcher
 
 #atom dependances
 gvfs-bin
 
 #TERMINAL
-rxvt terminator xterm screen
+rxvt terminator xterm screen stterm tmux
 
 #FIREWALL
 gufw
@@ -121,7 +123,8 @@ gufw
 
 #PHP
 libapache2-mod-php5 php5 php5-common php5-gd php5-mysql php5-imap php5-cli php5-cgi libapache2-mod-fcgid php-pear php-auth php5-mcrypt php5-imagick
-php-mail  mcrypt imagemagick libruby curl phpmyadmin
+php-mail  
+mcrypt imagemagick libruby curl phpmyadmin
 
 #C / C++
 gcc gcc+ build-essential debhelper fakeroot
@@ -130,14 +133,24 @@ autoconf cmake pkg-config
 #JS
 nodejs nodejs-legacy npm
 
+#LUA
+lua5.1
+
+#Ruby
+ruby ruby-rails
+
+#Golang
+golang
+
 #Virtualisation Container
 virtualbox vagrant 
 #docker
 
-#Con APT
+#APT
 apt-transport-https
 
 gparted gpart sysinfo hardinfo
+aptitude
 
 #XFCE extra
 xfce4 xfce4-terminal xfce4-battery-plugin xfce4-weather-plugin xfce4-whiskermenu-plugin

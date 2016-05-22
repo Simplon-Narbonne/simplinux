@@ -57,6 +57,8 @@ fi
 ##CUSTOM
 #CONFIG ENV
 alias rm='rm --preserve-root'
+alias ls='ls --color'
+
 export HISTSIZE=5000
 PS1='\[\e[0;97m\]\u\[\e[m\] \[\e[1;31m\]\w\[\e[m\] \[\e[1;26m\]\$\[\e[m\] \[\e[1;37m\]'
 
