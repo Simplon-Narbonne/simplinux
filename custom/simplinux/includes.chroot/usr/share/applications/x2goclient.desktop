@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=X2Go Client
+Exec=x2goclient
+Icon=x2goclient
+StartupWMClass=x2goclient
+X-Window-Icon=x2goclient
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+Terminal=false
+Categories=Qt;KDE;Network;
+Keywords=Terminal,Client,Remote,Desktop,Published,Applications,Session,Profile;
